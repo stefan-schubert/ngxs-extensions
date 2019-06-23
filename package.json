@@ -1,0 +1,38 @@
+{
+  "name": "ngxs-extensions",
+  "version": "1.0.0",
+  "description": "Extensions for @ngxs/store.",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest --config jest.config.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-schubert/ngxs-extensions.git"
+  },
+  "keywords": [
+    "ngxs",
+    "store",
+    "decorator"
+  ],
+  "author": "Stefan Schubert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefan-schubert/ngxs-extensions/issues"
+  },
+  "homepage": "https://github.com/stefan-schubert/ngxs-extensions#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "rollup": "^1.16.2",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "rxjs": "~6.5.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  }
+}
