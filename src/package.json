@@ -1,0 +1,30 @@
+{
+  "$schema": "../node_modules/ng-packagr/package.schema.json",
+  "name": "@ngxs-extensions/decorators",
+  "version": "1.0.0",
+  "license": "MIT",
+  "sideEffects": true,
+  "peerDependencies": {
+    "@angular/core": ">=6.0.0 <9.0.0",
+    "@ngxs/store": ">=3.4.3",
+    "rxjs": ">=6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-schubert/ngxs-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-schubert/ngxs-extensions/issues"
+  },
+  "homepage": "https://github.com/stefan-schubert/ngxs-extensions#readme",
+  "ngPackage": {
+    "lib": {
+      "flatModuleFile": "ngxs-extensions-decorators",
+      "entryFile": "index.ts",
+      "umdModuleIds": {
+        "@ngxs/store": "ngxs-store"
+      }
+    },
+    "dest": "../dist/decorators"
+  }
+}
