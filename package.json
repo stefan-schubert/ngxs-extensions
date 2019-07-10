@@ -2,7 +2,12 @@
   "name": "ngxs-extensions",
   "version": "0.0.0",
   "description": "Extensions for @ngxs/store.",
-  "scripts": {},
+  "scripts": {
+    "extensions:lint": "ng lint",
+    "extensions:test": "ng test",
+    "extensions:build": "ng build",
+    "ci": "npm run extensions:lint && npm run extensions:test && npm run extensions:build"
+  },
   "private": true,
   "repository": {
     "type": "git",

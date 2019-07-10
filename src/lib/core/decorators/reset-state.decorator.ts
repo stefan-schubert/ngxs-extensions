@@ -23,7 +23,7 @@ export function ResetStateToDefault(stateClass: any) {
 
     // set action handler on state class
     stateClass.prototype[fn] = ({ setState }: StateContext<any>) => {
-      setState(stateClass.defaults);
+      setState(meta.defaults);
     };
 
     // set meta data
@@ -46,7 +46,8 @@ export function ResetStateToDefault(stateClass: any) {
       const result = original.apply(this, args);
       // handle observable
       if (result instanceof Observable) {
-        return result.pipe(tap(dispatch));
+        result.toPromise().then(dispatch);
+        return result;
       }
       // handle promise
       if (result instanceof Promise) {
