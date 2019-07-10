@@ -1,15 +1,14 @@
-import { NgModule, ModuleWithProviders, Self } from '@angular/core';
-
-import { StaticInjector } from './core/internal/static-injector';
+import { ModuleWithProviders, NgModule, Self } from '@angular/core';
+import { InjectorAccessorService } from './core/internal/injector-accessor.service';
 
 @NgModule()
 export class NgxsExtensionsDecoratorsModule {
-  constructor(@Self() private staticInjector: StaticInjector) {}
+  constructor(@Self() private injectorAccessorService: InjectorAccessorService) {}
 
   public static forRoot(): ModuleWithProviders<NgxsExtensionsDecoratorsModule> {
     return {
       ngModule: NgxsExtensionsDecoratorsModule,
-      providers: [StaticInjector],
+      providers: [InjectorAccessorService],
     };
   }
 }
