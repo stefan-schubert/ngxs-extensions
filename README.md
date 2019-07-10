@@ -6,10 +6,37 @@
 
 Extends @ngxs/store with decorators and maybe some time with other things...
 
-## @ResetStateToDefault
-Resets a state to default on method call. Can be used to reset a detail state on destroying of a detail view.
+## Install
 
+To install `@ngxs-extensions/decorators` run the following command:
+
+```console
+npm install @ngxs-extensions/decorators
 ```
+
+## Usage
+
+
+Import the module into your root application module:
+
+```typescript
+import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsExtensionsDecoratorsModule } from '@ngxs-extensions/decorators';
+
+@NgModule({
+  imports: [
+    NgxsModule.forRoot(states),
+    NgxsExtensionsDecoratorsModule.forRoot()
+  ]
+})
+export class AppModule {}
+```
+
+## @ResetStateToDefault
+`@ResetStateToDefault` resets a state to default on method call. Can be used to reset a detail state on destroying of a detail view.
+
+```typescript
 @ResetStateToDefault(DetailState)
 ngOnDestroy() {
   // cleanup other things...
