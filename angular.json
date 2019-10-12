@@ -5,15 +5,15 @@
   "projects": {
     "decorators": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "packages/decorators",
       "projectType": "library",
       "prefix": "decorators",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "src/tsconfig.lib.json",
-            "project": "src/package.json"
+            "tsConfig": "packages/decorators/tsconfig.lib.json",
+            "project": "packages/decorators/package.json"
           }
         },
         "test": {
@@ -25,7 +25,35 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/tsconfig.lib.json", "tsconfig.spec.json"],
+            "tsConfig": ["packages/decorators/tsconfig.lib.json", "tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "storage-plugin": {
+      "root": "",
+      "sourceRoot": "packages/storage-plugin",
+      "projectType": "library",
+      "prefix": "storage-plugin",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "packages/storage-plugin/tsconfig.lib.json",
+            "project": "packages/storage-plugin/package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "no-cache": false
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["packages/storage-plugin/tsconfig.lib.json", "tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }

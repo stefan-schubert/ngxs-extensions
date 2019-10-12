@@ -1,4 +1,4 @@
 module.exports = {
-  roots: ['src'],
+  roots: ['packages/decorators', 'packages/storage-plugin'],
   cacheDirectory: '<rootDir>/.cache',
 };

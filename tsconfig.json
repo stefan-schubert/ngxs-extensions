@@ -3,8 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "decorators": ["src"],
-      "decorators/*": ["src/*"]
+      "decorators": ["packages/decorators"],
+      "decorators/*": ["packages/decorators/*"],
+      "storage-plugin": ["packages/storage-plugin"],
+      "storage-plugin/*": ["packages/storage-plugin/*"]
     },
     "target": "es5",
     "typeRoots": ["node_modules/@types"],
