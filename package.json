@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "ng lint",
     "test": "ng test --coverage",
-    "build": "ng build",
+    "build": "ng build decorators && ng build storage-plugin",
     "ci": "npm run lint && npm run test && npm run build"
   },
   "private": true,

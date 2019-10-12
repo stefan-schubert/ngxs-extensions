@@ -25,6 +25,6 @@
         "@ngxs/store": "ngxs-store"
       }
     },
-    "dest": "../../dist/decorators"
+    "dest": "../../dist/storage-plugin"
   }
 }
